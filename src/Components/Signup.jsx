@@ -12,7 +12,7 @@ const navigate=useNavigate();
 
     const handleSubmit= async (e)=>{
         e.preventDefault();
-        Axios.post('http://localhost:3000/auth/signup',{
+        Axios.post('https://paresfo-backend-1.onrender.com/auth/signup',{
     username,email,password}).then((response)=>{
         if(response.data.status){
             navigate('/login')  

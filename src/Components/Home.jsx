@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
 
   const handleLogout = () => {
-    axios.get('http://localhost:3000/auth/logout')
+    axios.get('https://paresfo-backend-1.onrender.com/auth/logout')
       .then(res => {
         if (res.data.status) {
           localStorage.removeItem("isLoggedIn"); // remove login status

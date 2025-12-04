@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const Dashboard = () => {
     const Navigate=useNavigate();
 useEffect(() => {
-    axios.get('http://localhost:3000/auth/verify')
+    axios.get('https://paresfo-backend-1.onrender.com/auth/verify')
 
     .then(res=>{
         if(res.data.status){

@@ -3,6 +3,7 @@ import "../App.css";
 import Axios from 'axios';
 import React,{ useState } from 'react';
 import { Link } from 'react-router-dom';
+
 const Login = () => {
    
     const[email,setEmail]=useState('')
@@ -11,18 +12,21 @@ const Login = () => {
 const navigate=useNavigate();
 
 Axios.defaults.withCredentials = true;
+
     const handleSubmit= async (e)=>{
         e.preventDefault();
-        Axios.post('http://localhost:3000/auth/login',{
+        Axios.post('https://paresfo-backend-1.onrender.com/auth/login',{
   
     email,
-    password}).then((response)=>{
+    password})
+    .then((response)=>{
         if(response.data.status){
+              localStorage.setItem("isLoggedIn", "true");
             navigate('/')  
         }
-        }).catch((error)=>{
+        }).catch((error)=>
             console.log(error)
-        })
+        );
     }
 
 

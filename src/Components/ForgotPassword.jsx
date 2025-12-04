@@ -13,7 +13,7 @@ const navigate=useNavigate();
 
     const handleSubmit= async (e)=>{
         e.preventDefault();
-        Axios.post('http://localhost:3000/auth/forgot-password',{
+        Axios.post('https://paresfo-backend-1.onrender.com/auth/forgot-password',{
     email,}).then((response)=>{
         if(response.data.status){
             alert("check Password reset link sent to your email");
