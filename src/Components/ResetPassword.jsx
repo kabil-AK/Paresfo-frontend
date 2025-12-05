@@ -31,13 +31,11 @@ const navigate=useNavigate();
       
       <label htmlFor="password"> New Password:</label>
         <input 
+       
         type="password" 
         placeholder='*******' 
         onChange={(e)=>setPassword
         (e.target.value)} />
-
-        
-
         <button type='password'>Send</button>
         
       </form>

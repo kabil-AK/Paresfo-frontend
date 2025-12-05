@@ -29,12 +29,24 @@ const navigate=useNavigate();
       <h2>Sign Up</h2>
       
         <label htmlFor="username">Username:</label>
-        <input type="text" placeholder='username' onChange={(e)=>setUsername(e.target.value)} />
-<label htmlFor="email">Email:</label>
-<input type="email" autoComplete='off' placeholder='Email'onChange={(e)=>setEmail(e.target.value)} />
+         <input
+          
+          type="text"
+          placeholder='username' 
+          onChange={(e)=>setUsername(e.target.value)} />
+        <label htmlFor="email">Email:</label>
+          <input 
+          
+          type="email" 
+          autoComplete='off' 
+          placeholder='Email'onChange={(e)=>setEmail(e.target.value)} />
 
         <label htmlFor="password">Password:</label>
-        <input type="password" placeholder='*******' onChange={(e)=>setPassword(e.target.value)} />
+          <input 
+          
+          type="password" 
+          placeholder='*******' 
+          onChange={(e)=>setPassword(e.target.value)} />
 
         <button type='password'>Sign Up</button>
         <p>Have an account?<Link to="/login">Login</Link></p> 
