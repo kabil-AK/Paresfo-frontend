@@ -8,13 +8,12 @@ const ResetPassword = () => {
     
     const[password,setPassword]=useState('')
     const {token}=useParams();
-
-const navigate=useNavigate();
+    const navigate=useNavigate();
 
     const handleSubmit= async (e)=>{
         e.preventDefault();
         Axios.post('https://paresfo-backend-1.onrender.com/auth/reset-password/'+token,{
-    password,}).then((response)=>{
+    password}).then((response)=>{
         if(response.data.status){
             navigate('/login')  
         }
@@ -34,9 +33,11 @@ const navigate=useNavigate();
        
         type="password" 
         placeholder='*******' 
+            autoComplete="off"
+              name="password"
         onChange={(e)=>setPassword
         (e.target.value)} />
-        <button type='password'>Send</button>
+        <button type='submit'>Send</button>
         
       </form>
     </div>
